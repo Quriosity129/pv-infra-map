@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+#layer-control {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 200px;
+}
+
+#layer-control h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+#layer-control h4 {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.base-layers {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.base-layers label,
+.layer-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.base-layers input[type="radio"],
+.layer-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.layer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.info {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+/* Map feature styling */
+.service-area {
+    stroke: #ff7800;
+    stroke-width: 2;
+    stroke-opacity: 0.65;
+    fill-opacity: 0.2;
+}
+
+.pv-location {
+    fill: #ffff00;
+    stroke: #000;
+    stroke-width: 1;
+}
+
+/* Infrastructure styling */
+.power-line {
+    stroke: #ff0000;
+    stroke-width: 2;
+}
+
+.substation {
+    fill: #0000ff;
+    stroke: #000;
+    stroke-width: 1;
+}
+
+.transformer {
+    fill: #00ff00;
+    stroke: #000;
+    stroke-width: 1;
+} 

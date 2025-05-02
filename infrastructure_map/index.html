@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Map</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="map"></div>
+    
+    <!-- Layer Control -->
+    <div id="layer-control">
+        <h3>Layers</h3>
+        <div class="base-layers">
+            <h4>Base Map</h4>
+            <label>
+                <input type="radio" name="base-layer" value="osm" checked>
+                OpenStreetMap
+            </label>
+            <label>
+                <input type="radio" name="base-layer" value="satellite">
+                Satellite Imagery
+            </label>
+        </div>
+        <div class="layer-options">
+            <h4>Infrastructure</h4>
+            <label>
+                <input type="checkbox" id="power-lines" checked>
+                Power Lines
+            </label>
+            <label>
+                <input type="checkbox" id="minor-lines" checked>
+                Minor Lines
+            </label>
+            <label>
+                <input type="checkbox" id="substations" checked>
+                Substations
+            </label>
+            <label>
+                <input type="checkbox" id="pv-locations" checked>
+                PV Installations
+            </label>
+        </div>
+        <div class="info">
+            <p>Click on a substation to see its service area</p>
+            <p>Click anywhere on the map to clear the service area</p>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/map.js"></script>
+</body>
+</html> 
