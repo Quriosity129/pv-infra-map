@@ -12,7 +12,7 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
 });
 
 // Add Anaheim boundary
-fetch('data/anaheim.geojson')
+fetch('./data/anaheim.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
@@ -61,11 +61,11 @@ async function loadInfrastructureData() {
             pvLocationsResponse,
             serviceAreasResponse
         ] = await Promise.all([
-            fetch('data/power_lines.geojson'),
-            fetch('data/minor_lines.geojson'),
-            fetch('data/substations_merged.geojson'),
-            fetch('data/pv_locations.geojson'),
-            fetch('data/service_areas.geojson')
+            fetch('./data/power_lines.geojson'),
+            fetch('./data/minor_lines.geojson'),
+            fetch('./data/substations_merged.geojson'),
+            fetch('./data/pv_locations.geojson'),
+            fetch('./data/service_areas.geojson')
         ]);
 
         const powerLinesData = await powerLinesResponse.json();
