@@ -104,4 +104,39 @@ body {
     fill: #00ff00;
     stroke: #000;
     stroke-width: 1;
+}
+
+/* Legend styling */
+.legend-line {
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 8px;
+    vertical-align: middle;
+    border: 1px solid #000;
+}
+
+.power-line {
+    background-color: #ff0000;
+}
+
+.minor-line {
+    background-color: #008000;
+}
+
+.substation {
+    background-color: #0000ff;
+}
+
+.pv-location {
+    background-color: #ffff00;
 } 
