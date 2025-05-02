@@ -11,8 +11,8 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
     maxZoom: 20
 });
 
-// Add Anaheim boundary
-fetch('./data/anaheim.geojson')
+// Add boundary
+fetch('./data/border.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
@@ -24,7 +24,7 @@ fetch('./data/anaheim.geojson')
             }
         }).addTo(map);
     })
-    .catch(error => console.error('Error loading Anaheim boundary:', error));
+    .catch(error => console.error('Error loading boundary:', error));
 
 // Layer groups for different infrastructure types
 const powerLinesLayer = L.layerGroup().addTo(map);
